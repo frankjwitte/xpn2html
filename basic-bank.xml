@@ -13,13 +13,13 @@
         </hees-menu-header>
     </hees-menu>
     <hees-forms>
-        <hees-form id="Open Account">
+        <hees-form id="Open Account" execution="Advisor">
         </hees-form>
-        <hees-form id="Close Account">
+        <hees-form id="Close Account" execution="Advisor">
         </hees-form>
-        <hees-form id="Withdraw">
+        <hees-form id="Withdraw" execution="Client">
         </hees-form>
-        <hees-form id="Deposit">
+        <hees-form id="Deposit" execution="Client">
         </hees-form>
     </hees-forms>
     <hees-actors>
