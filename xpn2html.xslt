@@ -7,6 +7,8 @@
     <xsl:variable name="subtitle">and co</xsl:variable>
     <xsl:variable name="email">me@home.org</xsl:variable>
 
+    <xsl:key name="custom_tags" match="//*" use="name()"/>
+
     <xsl:template match="/">
 
         <html>
@@ -18,10 +20,14 @@
                 <script>
                     import heesapp "hees-app.vue";
                     register "hees-app" heesapp;
-
-                    // ....hier alle custom tags.........
+                    <xsl:for-each select="//*[generate-id() = generate-id(key('custom_tags',name())[1])]">
+                    import "<xsl:value-of select="name()"/> "<xsl:value-of select="name()"/>.vue";
+                    register "<xsl:value-of select="name()"/> "<xsl:value-of select="name()"/>";
+                    </xsl:for-each>
 
                 </script>
+
+
 
             </head>
 
