@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="vue-custom-element.js"></script>
+
+    <script>
+        // import heesapp "hees-app.vue";
+        // register "hees-app" heesapp;
+
+        // ....hier alle custom tags.........
+
+    </script>
+</head>
+<body>
+<hees-app id="Bank">
+    <hees-menu>
+        <hees-menu-header id="Advice">
+            <hees-menu-item id="Open Account" execution="Advisor" form="Open Account" roles=""/>
+            <hees-menu-item id="Close Account" execution="Advisor" form="Close Account" roles=""/>
+        </hees-menu-header>
+        <hees-menu-header id="Cash Teller">
+            <hees-menu-item id="Withdraw" execution="Client" form="Withdraw" roles=""/>
+            <hees-menu-item id="Deposit" execution="Client" form="Deposit" roles=""/>
+        </hees-menu-header>
+    </hees-menu>
+    <hees-title title="" sub-title=""/>
+    <hees-user email="" Roles=""/>
+    <hees-forms>
+        <hees-form id="Open Account">
+        </hees-form>
+        <hees-form id="Close Account">
+        </hees-form>
+        <hees-form id="Withdraw">
+        </hees-form>
+        <hees-form id="Deposit">
+        </hees-form>
+    </hees-forms>
+    <hees-actors>
+        <hees-actor id="Advisor"/>
+        <hees-actor id="Client"/>
+    </hees-actors>
+</hees-app>
+</body>
+</html>
